@@ -31,6 +31,12 @@ a {
   text-decoration: none;
 }
 
+a:focus,
+button:focus {
+  outline: 2px dashed #004B9C;
+  outline-offset: 4px;
+}
+
 ul {
   list-style: none;
 }

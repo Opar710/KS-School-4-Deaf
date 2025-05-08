@@ -90,6 +90,9 @@ li {
    NAVIGATION
 ========================= */
 .main-nav {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
   display: flex;
   flex-direction: row-reverse;
   align-items: center;
@@ -98,6 +101,11 @@ li {
   background-color: #004B9C;
   color: #ffffff;
   border-radius: 0.85rem;
+  transition: box-shadow 0.3s ease; 
+}
+
+.main-nav.scrolled {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
 }
 
 .nav-toggle {
@@ -119,7 +127,7 @@ li {
   padding-right: 0;
   list-style: none;
   margin: 0;
-  text-align: center; 
+  text-align: center;
 }
 
 .nav-links.nav-open {

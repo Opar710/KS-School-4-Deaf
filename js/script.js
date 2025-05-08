@@ -22,3 +22,12 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
+
+window.addEventListener("scroll", () => {
+  const nav = document.querySelector(".main-nav");
+  if (window.scrollY > 10) {
+    nav.classList.add("scrolled");
+  } else {
+    nav.classList.remove("scrolled");
+  }
+});

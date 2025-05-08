@@ -167,10 +167,8 @@ li {
   border-radius: 0.5rem;
   width: fit-content;
   margin: 0.5rem 0 0 0.5rem;
-  background-color: #ffffff00;
-  box-shadow:
-    0 0 12px rgba(28, 107, 252, 0.8),
-    0 0 24px rgba(28, 107, 252, 0.6),
+  background-color: transparent;
+  box-shadow: none;
 }
 
 .main-nav.nav-collapsed .logo,
@@ -185,10 +183,10 @@ li {
 
 .nav-mini-button {
   display: none;
-  background-color: #1C6BFC;
+  background-color: #1c6afc8c;
   color: white;
   border: none;
-  font-size: 1.25rem;
+  font-size: 1.50rem;
   padding: 0.6rem 1rem;
   border-radius: 0.75rem;
   cursor: pointer;

@@ -10,7 +10,7 @@ html {
 }
 
 body {
-  font-family: 'Segoe UI', sans-serif;
+  font-family: "Libre Baskerville", serif;
   background-color: #ffffff;
   color: #222222;
   line-height: 1.6;
@@ -184,7 +184,7 @@ li {
 .nav-mini-button {
   display: none;
   background-color: #1c6afc8c;
-  color: white;
+  color: rgb(223, 223, 223);
   border: none;
   font-size: 1.50rem;
   padding: 0.6rem 1rem;
@@ -194,7 +194,7 @@ li {
   z-index: 1001;
   box-shadow:
     0 0 12px rgba(28, 107, 252, 0.8),
-    0 0 24px rgba(28, 107, 252, 0.6),
+    0 0 24px rgb(0, 0, 0),
     0 0 36px rgba(28, 107, 252, 0.4);  
   transition: transform 0.2s ease, box-shadow 0.3s ease;
 }
@@ -261,7 +261,7 @@ li {
 }
 
 .btn:hover {
-  background-color: #003770;
+  background-color: #10539b;
 }
 
 /* =========================

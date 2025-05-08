@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
       nav.classList.remove("scrolled");
     }
 
-    if (window.scrollY > 200) {
+    if (window.scrollY > 140) {
       nav.classList.add("nav-collapsed");
     } else {
       nav.classList.remove("nav-collapsed");

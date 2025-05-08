@@ -91,16 +91,12 @@ li {
 ========================= */
 .main-nav {
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  padding: 1rem 1.5rem;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1rem;
   background-color: #004B9C;
   color: #ffffff;
-}
-
-.logo {
-  font-weight: bold;
-  font-size: 1.5rem;
 }
 
 .nav-toggle {
@@ -146,10 +142,9 @@ li {
    LOGO
 ========================= */
 .logo img {
-  height: 48px;
+  height: 64px;
   width: auto;
   display: block;
-  margin-bottom: 1rem;
 }
 
 
@@ -219,7 +214,7 @@ footer {
 ========================= */
 @media (min-width: 768px) {
   .main-nav {
-    flex-direction: row;
+    flex-direction: row; 
     justify-content: space-between;
     align-items: center;
   }
@@ -244,9 +239,9 @@ footer {
   }
 
   .logo img {
-    height: 56px;
+    height: 48px;
   }
-
+  
   .hero {
     display: flex;
     justify-content: space-between;

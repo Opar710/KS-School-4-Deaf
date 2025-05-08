@@ -94,7 +94,7 @@ li {
   flex-direction: row-reverse;
   align-items: center;
   justify-content: space-between;
-  padding: 1rem 1rem;
+  padding: .5rem .5rem;
   background-color: #004B9C;
   color: #ffffff;
 }
@@ -119,10 +119,9 @@ li {
 }
 
 .nav-links.nav-open {
-  max-height: 500px; /* adjust as needed */
+  max-height: 500px; 
   background-color: #004B9C;
-  padding: 1rem;
-  border-top: 1px solid #003770;
+  padding: .5rem;
 }
 
 .nav-links a {
@@ -142,7 +141,7 @@ li {
    LOGO
 ========================= */
 .logo img {
-  height: 64px;
+  height: 100px;
   width: auto;
   display: block;
 }

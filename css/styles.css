@@ -17,6 +17,12 @@ body {
   padding: 1rem;
 }
 
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
 /* =========================
    GLOBAL ELEMENTS
 ========================= */
@@ -90,7 +96,6 @@ li {
    NAVIGATION
 ========================= */
 .main-nav {
-  position: sticky;
   top: 0;
   z-index: 1000;
   display: flex;
@@ -101,7 +106,7 @@ li {
   background-color: #004B9C;
   color: #ffffff;
   border-radius: 0.85rem;
-  transition: box-shadow 0.3s ease; 
+  transition: all 0.3s ease; 
 }
 
 .main-nav.scrolled {
@@ -156,6 +161,53 @@ li {
   background-color: rgba(255, 255, 255, 0.1);
 }
 
+.main-nav.nav-collapsed {
+  justify-content: flex-end;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  width: fit-content;
+  margin: 0.5rem 0 0 0.5rem;
+  background-color: #ffffff00;
+  box-shadow:
+    0 0 12px rgba(28, 107, 252, 0.8),
+    0 0 24px rgba(28, 107, 252, 0.6),
+}
+
+.main-nav.nav-collapsed .logo,
+.main-nav.nav-collapsed .nav-links,
+.main-nav.nav-collapsed .nav-toggle {
+  display: none;
+}
+
+.main-nav.nav-collapsed .nav-mini-button {
+  display: block;
+}
+
+.nav-mini-button {
+  display: none;
+  background-color: #1C6BFC;
+  color: white;
+  border: none;
+  font-size: 1.25rem;
+  padding: 0.6rem 1rem;
+  border-radius: 0.75rem;
+  cursor: pointer;
+  position: relative; 
+  z-index: 1001;
+  box-shadow:
+    0 0 12px rgba(28, 107, 252, 0.8),
+    0 0 24px rgba(28, 107, 252, 0.6),
+    0 0 36px rgba(28, 107, 252, 0.4);  
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.nav-mini-button:hover {
+  transform: scale(1.05);
+  box-shadow:
+    0 8px 32px rgba(28, 107, 252, 0.4),
+    0 0 50px rgba(28, 107, 252, 0.3);
+}
+
 /* =========================
    LOGO
 ========================= */
@@ -164,7 +216,6 @@ li {
   width: auto;
   display: block;
 }
-
 
 /* =========================
    HERO SECTION

@@ -1,6 +1,28 @@
 document.addEventListener("DOMContentLoaded", function () {
   const toggle = document.querySelector(".nav-toggle");
   const navLinks = document.querySelector(".nav-links");
+  const nav = document.querySelector(".main-nav");
+  const miniBtn = document.querySelector(".nav-mini-button");
+
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 10) {
+      nav.classList.add("scrolled");
+    } else {
+      nav.classList.remove("scrolled");
+    }
+
+    if (window.scrollY > 200) {
+      nav.classList.add("nav-collapsed");
+    } else {
+      nav.classList.remove("nav-collapsed");
+    }
+  });
+
+  miniBtn.addEventListener("click", () => {
+    nav.classList.remove("nav-collapsed");
+    navLinks.classList.add("nav-open");
+    toggle.setAttribute("aria-expanded", "true");
+  });
 
   toggle.addEventListener("click", () => {
     const isExpanded = toggle.getAttribute("aria-expanded") === "true";
@@ -21,13 +43,4 @@ document.addEventListener("DOMContentLoaded", function () {
       toggle.setAttribute("aria-expanded", "false");
     }
   });
-});
-
-window.addEventListener("scroll", () => {
-  const nav = document.querySelector(".main-nav");
-  if (window.scrollY > 10) {
-    nav.classList.add("scrolled");
-  } else {
-    nav.classList.remove("scrolled");
-  }
 });

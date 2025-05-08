@@ -118,6 +118,8 @@ li {
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.3s ease-in-out;
+  padding-left: 0;
+  padding-right: 0;
 }
 
 .nav-links.nav-open {
@@ -128,10 +130,11 @@ li {
 }
 
 .nav-links a {
+  display: block;
+  padding: 0.75rem 1rem;
   font-weight: bold;
   color: white;
   text-decoration: none;
-  transition: color 0.3s ease;
 }
 
 .nav-links a:hover,

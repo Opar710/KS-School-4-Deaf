@@ -91,8 +91,8 @@ li {
 ========================= */
 .main-nav {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
   padding: 1rem 1.5rem;
   background-color: #004B9C;
   color: #ffffff;
@@ -141,6 +141,17 @@ li {
 .nav-links a.active {
   text-decoration: underline;
 }
+
+/* =========================
+   LOGO
+========================= */
+.logo img {
+  height: 48px;
+  width: auto;
+  display: block;
+  margin-bottom: 1rem;
+}
+
 
 /* =========================
    HERO SECTION
@@ -207,6 +218,12 @@ footer {
    MEDIA QUERIES
 ========================= */
 @media (min-width: 768px) {
+  .main-nav {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
   .nav-links {
     display: flex;
     flex-direction: row;
@@ -222,6 +239,14 @@ footer {
     display: none;
   }
 
+  .logo {
+    margin-bottom: 0;
+  }
+
+  .logo img {
+    height: 56px;
+  }
+
   .hero {
     display: flex;
     justify-content: space-between;
@@ -230,17 +255,16 @@ footer {
     text-align: left;
   }
 
-  .hero-content, .image-container {
+  .hero-content,
+  .image-container {
     flex: 1;
   }
 
   .grid-2 {
     grid-template-columns: repeat(2, 1fr);
   }
-  
+
   .grid-3 {
     grid-template-columns: repeat(3, 1fr);
   }
 }
-
-

@@ -1,15 +1,24 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const toggle = document.querySelector(".nav-toggle"); // the hamburger button
-  const navLinks = document.querySelector(".nav-links"); // the nav list
+  const toggle = document.querySelector(".nav-toggle");
+  const navLinks = document.querySelector(".nav-links");
 
   toggle.addEventListener("click", () => {
-    // Check if aria-expanded is currently "true"
     const isExpanded = toggle.getAttribute("aria-expanded") === "true";
-
-    // Flip it: true → false, false → true
     toggle.setAttribute("aria-expanded", String(!isExpanded));
-
-    // Toggle the class that shows/hides the nav
     navLinks.classList.toggle("nav-open");
+  });
+
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && navLinks.classList.contains("nav-open")) {
+      navLinks.classList.remove("nav-open");
+      toggle.setAttribute("aria-expanded", "false");
+    }
+  });
+
+  navLinks.addEventListener("click", (e) => {
+    if (e.target.tagName === "A" && navLinks.classList.contains("nav-open")) {
+      navLinks.classList.remove("nav-open");
+      toggle.setAttribute("aria-expanded", "false");
+    }
   });
 });

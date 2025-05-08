@@ -94,13 +94,14 @@ li {
   flex-direction: row-reverse;
   align-items: center;
   justify-content: space-between;
-  padding: .5rem .5rem;
+  padding: 0.5rem 0.5rem;
   background-color: #004B9C;
   color: #ffffff;
+  border-radius: 0.85rem;
 }
 
 .nav-toggle {
-  font-size: 2rem;
+  font-size: 3rem;
   background: none;
   border: none;
   color: white;
@@ -116,32 +117,42 @@ li {
   transition: max-height 0.3s ease-in-out;
   padding-left: 0;
   padding-right: 0;
+  list-style: none;
+  margin: 0;
+  text-align: center; 
 }
 
 .nav-links.nav-open {
-  max-height: 500px; 
+  max-height: 400px;
   background-color: #004B9C;
-  padding: .5rem;
+  padding: 0.5rem;
+}
+
+.nav-links li {
+  list-style-type: none;
 }
 
 .nav-links a {
   display: block;
   padding: 0.75rem 1rem;
   font-weight: bold;
+  font-size: 1.25rem;
   color: white;
   text-decoration: none;
+  border-radius: 0.4rem;
 }
 
 .nav-links a:hover,
 .nav-links a.active {
   text-decoration: underline;
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
 /* =========================
    LOGO
 ========================= */
 .logo img {
-  height: 100px;
+  height: 86px;
   width: auto;
   display: block;
 }

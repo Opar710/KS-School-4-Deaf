@@ -63,13 +63,7 @@ h1, h2, h3 {
   text-align: center;
   line-height: 1.2;
   margin-bottom: 1rem;
-  color: #0d4896; 
-}
-
-.hero h1 {
-  font-weight: 700;
-  font-size: 1.8rem;  
-  text-align: center;
+  color: #0f54ae; 
 }
 
 .about h2 {
@@ -212,6 +206,31 @@ li {
 }
 
 /* =========================
+   CONTACT BANNER
+========================= */
+.contact-banner {
+  background-color: #eaf1fb;
+  padding: 0.75rem 1rem;
+  font-size: 0.95rem;
+  border-bottom: 2px solid #c6d7eb;
+}
+
+.contact-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  max-width: 960px;
+  margin: auto;
+  color: #002f6c;
+}
+
+.contact-banner a {
+  color: #004B9C;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+/* =========================
    LOGO
 ========================= */
 .logo img {
@@ -224,13 +243,42 @@ li {
    HERO SECTION
 ========================= */
 .hero {
-  text-align: center;
+  background-color: #f4f7fb;
+  padding: 2rem 1rem 2.5rem;
+  border-bottom: 2px solid #e0e0e0;
 }
 
 .hero-content {
   margin-bottom: 1.5rem;
 }
 
+.hero h1 {
+  font-weight: 700;
+  font-size: 1.5rem;  
+  text-align: center;
+  padding: 0 0.5rem;
+}
+
+.hero .image-container {
+  background-color: #ffffff;
+  border: 2px solid #004B9C;
+  border-radius: 8px;
+  overflow: hidden;
+  padding: 0.5rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+.hero .image-container img {
+  border-radius: 4px;
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.hero p {
+  margin-top: 1rem;
+  line-height: 1.6;
+}
 /* =========================
    LAYOUT & STRUCTURE
 ========================= */
@@ -254,7 +302,11 @@ li {
 /* =========================
    BUTTONS
 ========================= */
-.btn {
+.btn-cta {
+  background-color: #002f6c;
+  font-size: 1.1rem;
+  padding: 0.75rem 1.5rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   font-family: 'Exo', sans-serif;
   display: inline-block;
   padding: 0.5rem 1.25rem;
@@ -264,6 +316,9 @@ li {
   border-radius: 4px;
   font-weight: 600;
   letter-spacing: 0.5px;
+}
+.hero-content .btn-cta {
+  margin-top: 1.25rem;
 }
 
 /* =========================

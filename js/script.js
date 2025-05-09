@@ -3,14 +3,26 @@ document.addEventListener("DOMContentLoaded", function () {
   const navLinks = document.querySelector(".nav-links");
   const nav = document.querySelector(".main-nav");
   const miniBtn = document.querySelector(".nav-mini-button");
+  const defaultLogo = document.querySelector(".default-logo");
+  const menuLogo = document.querySelector(".menu-logo");
 
   window.addEventListener("scroll", () => {
     if (window.scrollY > 2) {
       nav.classList.add("scrolled");
+      defaultLogo.style.display = "none";
+      menuLogo.style.display = "none";
     } else {
       nav.classList.remove("scrolled");
+
+      if (nav.classList.contains("nav-open")) {
+        defaultLogo.style.display = "none";
+        menuLogo.style.display = "block";
+      } else {
+        defaultLogo.style.display = "block";
+        menuLogo.style.display = "none";
+      }
     }
-  
+
     if (window.scrollY > 50 && !nav.classList.contains("nav-open")) {
       nav.classList.add("nav-collapsed");
     } else if (!nav.classList.contains("nav-open")) {
@@ -23,6 +35,8 @@ document.addEventListener("DOMContentLoaded", function () {
     nav.classList.add("nav-open");  
     toggle.setAttribute("aria-expanded", "true");
     navLinks.classList.add("nav-open");
+    defaultLogo.style.display = "none";
+    menuLogo.style.display = "block";
   });
 
   toggle.addEventListener("click", () => {
@@ -30,6 +44,14 @@ document.addEventListener("DOMContentLoaded", function () {
     toggle.setAttribute("aria-expanded", String(!isExpanded));
     nav.classList.toggle("nav-open"); 
     navLinks.classList.toggle("nav-open");
+
+    if (nav.classList.contains("nav-open")) {
+      defaultLogo.style.display = "none";
+      menuLogo.style.display = "block";
+    } else {
+      defaultLogo.style.display = "block";
+      menuLogo.style.display = "none";
+    }
   });
 
   document.addEventListener("keydown", (e) => {
@@ -37,6 +59,8 @@ document.addEventListener("DOMContentLoaded", function () {
       nav.classList.remove("nav-open"); 
       navLinks.classList.remove("nav-open");
       toggle.setAttribute("aria-expanded", "false");
+      defaultLogo.style.display = "block";
+      menuLogo.style.display = "none";
     }
   });
 
@@ -45,6 +69,8 @@ document.addEventListener("DOMContentLoaded", function () {
       nav.classList.remove("nav-open");
       navLinks.classList.remove("nav-open");
       toggle.setAttribute("aria-expanded", "false");
+      defaultLogo.style.display = "block";
+      menuLogo.style.display = "none";
     }
   });
 });

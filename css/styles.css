@@ -12,7 +12,6 @@ html {
 body {
   font-family: 'Exo', sans-serif;
   color: #222;
-  background-color: #f4f7fb;
   line-height: 1.6;
   padding: 1rem;
 }
@@ -234,10 +233,22 @@ li {
 /* =========================
    LOGO
 ========================= */
-.logo img {
-  height: 86px;
-  width: auto;
-  display: block;
+.mobile-logo-toggle {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  background-color: #004b9c;
+}
+
+.mobile-logo-toggle img {
+  max-width: 80%;
+  height: auto;
+  object-fit: contain;
+}
+
+.main-nav.nav-open .mobile-logo-toggle {
+  display: flex;
 }
 
 /* =========================

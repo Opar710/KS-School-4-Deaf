@@ -20,26 +20,26 @@ document.addEventListener("DOMContentLoaded", function () {
 
   miniBtn.addEventListener("click", () => {
     nav.classList.remove("nav-collapsed");
-    navLinks.classList.add("nav-open");
+    nav.classList.add("nav-open"); // ✅ Apply nav-open to nav
     toggle.setAttribute("aria-expanded", "true");
   });
 
   toggle.addEventListener("click", () => {
     const isExpanded = toggle.getAttribute("aria-expanded") === "true";
     toggle.setAttribute("aria-expanded", String(!isExpanded));
-    navLinks.classList.toggle("nav-open");
+    nav.classList.toggle("nav-open"); // ✅ Toggle it here
   });
 
   document.addEventListener("keydown", (e) => {
-    if (e.key === "Escape" && navLinks.classList.contains("nav-open")) {
-      navLinks.classList.remove("nav-open");
+    if (e.key === "Escape" && nav.classList.contains("nav-open")) {
+      nav.classList.remove("nav-open"); // ✅ Remove on escape
       toggle.setAttribute("aria-expanded", "false");
     }
   });
 
   navLinks.addEventListener("click", (e) => {
-    if (e.target.tagName === "A" && navLinks.classList.contains("nav-open")) {
-      navLinks.classList.remove("nav-open");
+    if (e.target.tagName === "A" && nav.classList.contains("nav-open")) {
+      nav.classList.remove("nav-open"); // ✅ Remove when link clicked
       toggle.setAttribute("aria-expanded", "false");
     }
   });

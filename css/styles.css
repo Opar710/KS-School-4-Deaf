@@ -472,6 +472,43 @@ li {
 }
 
 /* =========================
+   SERVICES & RESOURCES SECTION
+========================= */
+.services-section {
+  background-color: #f9f9f9;
+  padding: 2rem 1rem;
+  border-radius: 12px;
+  border: 1.5px solid #004B9C;
+  box-shadow: 2px 3px 6px rgba(0, 0, 0, 0.08);
+  margin: 2rem auto;
+  max-width: 1200px;
+}
+
+.section-heading {
+  font-size: 1.75rem;
+  text-align: center;
+  color: #0f54ae;
+  margin-bottom: 2rem;
+}
+
+.grid.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.btn-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.btn-group .btn {
+  flex: 1 1 auto;
+  text-align: center;
+}
+
+/* =========================
    FOOTER
 ========================= */
 footer {

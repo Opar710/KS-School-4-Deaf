@@ -5,13 +5,13 @@ document.addEventListener("DOMContentLoaded", function () {
   const miniBtn = document.querySelector(".nav-mini-button");
 
   window.addEventListener("scroll", () => {
-    if (window.scrollY > 10) {
+    if (window.scrollY > 2) {
       nav.classList.add("scrolled");
     } else {
       nav.classList.remove("scrolled");
     }
 
-    if (window.scrollY > 140) {
+    if (window.scrollY > 50) {
       nav.classList.add("nav-collapsed");
     } else {
       nav.classList.remove("nav-collapsed");

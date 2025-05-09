@@ -10,10 +10,10 @@ document.addEventListener("DOMContentLoaded", function () {
     } else {
       nav.classList.remove("scrolled");
     }
-
-    if (window.scrollY > 50) {
+  
+    if (window.scrollY > 50 && !nav.classList.contains("nav-open")) {
       nav.classList.add("nav-collapsed");
-    } else {
+    } else if (!nav.classList.contains("nav-open")) {
       nav.classList.remove("nav-collapsed");
     }
   });
@@ -22,17 +22,20 @@ document.addEventListener("DOMContentLoaded", function () {
     nav.classList.remove("nav-collapsed");
     nav.classList.add("nav-open");  
     toggle.setAttribute("aria-expanded", "true");
+    navLinks.classList.add("nav-open");
   });
 
   toggle.addEventListener("click", () => {
     const isExpanded = toggle.getAttribute("aria-expanded") === "true";
     toggle.setAttribute("aria-expanded", String(!isExpanded));
     nav.classList.toggle("nav-open"); 
+    navLinks.classList.toggle("nav-open");
   });
 
   document.addEventListener("keydown", (e) => {
     if (e.key === "Escape" && nav.classList.contains("nav-open")) {
       nav.classList.remove("nav-open"); 
+      navLinks.classList.remove("nav-open");
       toggle.setAttribute("aria-expanded", "false");
     }
   });
@@ -40,6 +43,7 @@ document.addEventListener("DOMContentLoaded", function () {
   navLinks.addEventListener("click", (e) => {
     if (e.target.tagName === "A" && nav.classList.contains("nav-open")) {
       nav.classList.remove("nav-open");
+      navLinks.classList.remove("nav-open");
       toggle.setAttribute("aria-expanded", "false");
     }
   });
